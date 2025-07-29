@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Akademi Taruni Qur’an</title>
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #e2b6c7;
+      --secondary: #fff7f7;
+      --accent: #f5e3b4;
+      --gold: #eac16b;
+      --text: #3c2c2c;
+      --button: #e2b6c7;
+      --button-hover: #eac16b;
+    }
+    body {
+      font-family: 'Nunito', Arial, sans-serif;
+      margin: 0;
+      background: var(--secondary);
+      color: var(--text);
+    }
+    header {
+      background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+      text-align: center;
+      padding: 2rem 1rem 1rem 1rem;
+      border-bottom: 1px solid #f3e3e3;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin: 0.5rem 0 0 0;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      position: relative;
+    }
+    .hero-overlay {
+      background: rgba(226, 182, 199, 0.65);
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .hero-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      margin-bottom: 2rem;
+    }
+    .register-btn {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--button);
+      border: none;
+      border-radius: 32px;
+      text-decoration: none;
+      transition: background 0.2s;
+      box-shadow: 0 2px 10px rgba(226,182,199,0.18);
+    }
+    .register-btn:hover {
+      background: var(--button-hover);
+      color: var(--text);
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 5px 32px rgba(226, 182, 199, 0.10);
+      padding: 2rem;
+    }
+    .program-section h3 {
+      color: var(--primary);
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .program-years {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
+    .year-card {
+      flex: 1 1 200px;
+      min-width: 180px;
+      background: var(--secondary);
+      border: 1px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      box-shadow: 0 1px 8px rgba(226, 182, 199, 0.09);
+    }
+    .year-card h4 {
+      color: var(--gold);
+      margin: 0 0 0.7rem 0;
+      font-size: 1.12rem;
+      font-weight: 700;
+    }
+    .year-card p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .social-section {
+      text-align: center;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+    .social-section h4 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+    .social-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 1.5rem;
+      transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(226,182,199,0.13);
+    }
+    .social-btn:hover {
+      background: var(--gold);
+      color: var(--text);
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: var(--secondary);
+      text-align: center;
+      font-size: 0.95rem;
+      color: #8a7d7d;
+      border-top: 1px solid #f5e3e3;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 1rem;
+      }
+      .program-years {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .hero-content h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Akademi Taruni Qur’an</h1>
+    <p>Mempersiapkan Hafidzah & Da’iyah Masa Depan</p>
+  </header>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>Bergabung Bersama Akademi Taruni Qur’an</h2>
+      <p>
+        Program khusus 3 tahun untuk putri di tingkat SMA agar menjadi Hafidzah dan ahli Bahasa Arab.<br>
+        <b>Pendaftaran Tahun Ajaran 2025–2026 sudah dibuka!</b>
+      </p>
+      <a href="#register" class="register-btn">Daftar Sekarang</a>
+    </div>
+  </section>
+  <main>
+    <section class="program-section">
+      <h3>Deskripsi Program 3 Tahun</h3>
+      <div class="program-years">
+        <div class="year-card">
+          <h4>Tahun 1</h4>
+          <p>Tahsin &amp; Menghafal 15 Juz</p>
+        </div>
+        <div class="year-card">
+          <h4>Tahun 2</h4>
+          <p>Bahasa Arab Intensif + Hafalan hingga 25 Juz</p>
+        </div>
+        <div class="year-card">
+          <h4>Tahun 3</h4>
+          <p>Penguatan Dakwah, Terjemah, &amp; Menyelesaikan 30 Juz</p>
+        </div>
+      </div>
+    </section>
+    <section class="social-section">
+      <h4>Ikuti dan Hubungi Kami:</h4>
+      <div class="social-buttons">
+        <a href="https://wa.me/" target="_blank" class="social-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://facebook.com/" target="_blank" class="social-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com/" target="_blank" class="social-btn" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://link.id/" target="_blank" class="social-btn" title="Link.id"><i class="fas fa-link"></i></a>
+        <a href="https://telegram.org/" target="_blank" class="social-btn" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://twitter.com/" target="_blank" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </section>
+    <div style="text-align:center; margin:2rem 0 0 0;">
+      <a href="#register" class="register-btn">Daftar Sekarang</a>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Akademi Taruni Qur’an. Seluruh hak cipta dilindungi.<br>
+    Kontak: <a href="mailto:info@taruniquran.sch.id" style="color:var(--primary);text-decoration:none;">info@taruniquran.sch.id</a>
+  </footer>
+</body>
+</html>
