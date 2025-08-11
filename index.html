@@ -8,25 +8,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --primary: #2b2b2b;       /* warna utama gelap */
-  --secondary: #121212;     /* warna latar belakang */
-  --accent: #f5e3b4;        /* warna aksen tetap terang agar kontras */
-  --gold: #eac16b;
-  --text: #ffffff;          /* warna teks putih agar terlihat */
-  --button: #444444;        /* tombol gelap */
-  --button-hover: #666666;  /* hover tombol lebih terang */
+      --secondary: #121212;     /* warna latar belakang */
+      --accent: #f5e3b4;        /* warna aksen terang */
+      --gold: #eac16b;
+      --text: #ffffff;          /* warna teks */
+      --button: #444444;        /* tombol gelap */
+      --button-hover: #666666;  /* hover tombol lebih terang */
     }
+
     body {
       font-family: 'Nunito', Arial, sans-serif;
-  margin: 0;
-  background: var(--secondary);
-  color: var(--text);
+      margin: 0;
+      background: var(--secondary);
+      color: var(--text);
     }
+
+    /* Navigasi */
+    nav {
+      background-color: var(--primary);
+      padding: 10px;
+      border-bottom: 2px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+    }
+    nav a:hover {
+      background-color: var(--gold);
+      color: var(--primary);
+      border-radius: 5px;
+    }
+
     header {
-     background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
-  text-align: center;
+      background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+      text-align: center;
     }
     header h1 {
       margin: 0;
@@ -41,6 +68,7 @@
       color: var(--text);
       font-weight: 500;
     }
+
     .hero {
       background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       min-height: 350px;
@@ -51,7 +79,7 @@
       position: relative;
     }
     .hero-overlay {
-      background: rgba(226, 182, 199, 0.65);
+      background: rgba(43, 43, 43, 0.65);
       position: absolute;
       inset: 0;
       z-index: 1;
@@ -91,6 +119,7 @@
       background: var(--button-hover);
       color: var(--text);
     }
+
     main {
       max-width: 800px;
       margin: 2rem auto;
@@ -98,6 +127,7 @@
       border-radius: 18px;
       box-shadow: 0 5px 32px rgba(226, 182, 199, 0.10);
       padding: 2rem;
+      color: var(--primary);
     }
     .program-section h3 {
       color: var(--primary);
@@ -123,6 +153,7 @@
       margin-bottom: 1rem;
       text-align: left;
       box-shadow: 0 1px 8px rgba(226, 182, 199, 0.09);
+      color: var(--text);
     }
     .year-card h4 {
       color: var(--gold);
@@ -166,7 +197,7 @@
     }
     .social-btn:hover {
       background: var(--gold);
-      color: var(--text);
+      color: var(--primary);
     }
     footer {
       margin-top: 2rem;
@@ -195,10 +226,24 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="#paket">Paket</a>
+    <a href="#jadwal">Jadwal</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#kontak">Kontak</a>
+    <a href="https://umrahmandiriadem.biz.id">Beranda</a>
+    <a href="https://umrahmandiriadem.biz.id/UMA">Visa & Siskopatuh</a>
+    <a href="https://umrahmandiriadem.biz.id/akademi-taruni-quran">Hotel/Apartemen</a>
+    <a href="https://umrahmandiriadem.biz.id/galeri">Galeri Kurma</a>
+  </nav>
+
   <header>
     <h1>Akademi Taruni Qur’an</h1>
     <p>Mempersiapkan Hafidzah & Da’iyah Masa Depan</p>
   </header>
+
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -210,6 +255,7 @@
       <a href="#register" class="register-btn">Daftar Sekarang</a>
     </div>
   </section>
+
   <main>
     <section class="program-section">
       <h3>Deskripsi Program 3 Tahun</h3>
@@ -228,6 +274,7 @@
         </div>
       </div>
     </section>
+
     <section class="social-section">
       <h4>Ikuti dan Hubungi Kami:</h4>
       <div class="social-buttons">
@@ -240,13 +287,16 @@
         <a href="https://twitter.com/" target="_blank" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
       </div>
     </section>
+
     <div style="text-align:center; margin:2rem 0 0 0;">
       <a href="#register" class="register-btn">Daftar Sekarang</a>
     </div>
   </main>
+
   <footer>
     &copy; 2025 Akademi Taruni Qur’an. Seluruh hak cipta dilindungi.<br>
-    Kontak: <a href="mailto:info@taruniquran.sch.id" style="color:var(--primary);text-decoration:none;">info@taruniquran.sch.id</a>
+    Kontak: <a href="mailto:info@taruniquran.sch.id" style="color:var(--gold);text-decoration:none;">info@taruniquran.sch.id</a>
   </footer>
+
 </body>
 </html>
